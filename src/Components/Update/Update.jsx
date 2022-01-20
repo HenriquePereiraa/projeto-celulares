@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Update.module.css";
-import Button from "../Button/Button";
 import { useNavigate, useParams } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -147,7 +146,6 @@ const Update = () => {
                 </div>
                 <div className={styles.buttons}>
                   <div className={styles.back}>
-                    {/* <Button name="voltar" /> */}
                     <button className={styles.button} onClick={handleBack}>
                       Voltar
                     </button>

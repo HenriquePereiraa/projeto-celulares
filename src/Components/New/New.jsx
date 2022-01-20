@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React  from "react";
 import styles from "./New.module.css";
-import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -34,7 +33,7 @@ const New = () => {
       endDate: getReformateDate(values.endDate),
       color: values.color,
     };
-    
+
     if(moment(values.date).isSameOrAfter(values.endDate)) {
       alert("Data final das vendas inválida! Por favor insira uma data válida")
     } else {
@@ -129,7 +128,6 @@ const New = () => {
               </div>
               <div className={styles.buttons}>
                 <div className={styles.back}>
-                  {/* <Button name="voltar" /> */}
                   <button className={styles.button} onClick={handleBack}>
                     Voltar
                   </button>

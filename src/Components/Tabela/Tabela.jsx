@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Button from "../Button/Button";
 import styles from "./Tabela.module.css";
 import { IoPhonePortraitSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
@@ -47,7 +46,6 @@ const Tabela = () => {
       <div className={styles.container}>
         <header className={styles.header}>
           <h2>Produtos</h2>
-          {/* <Button name="Adicionar" icon={} handleClickAdd={handleClickAdd}/> */}
           <button className={styles.button} onClick={handleClickAdd}>
             <IoPhonePortraitSharp />
             Adicionar
