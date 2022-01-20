@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #054A91;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.container h1 {
+    color:#DAE3ED;
+    font-size: 56px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.icon__logo{
+    font-size: 40px;
+    margin-left: -8px;
+}

@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 120px;   
+    background-color: #DAE3ED;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #1D1D1D;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;
+}

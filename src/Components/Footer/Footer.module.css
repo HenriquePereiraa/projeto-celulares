@@ -1,0 +1,16 @@
+.container{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding:0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #054A91;
+}
+
+.footer{
+    color:#DAE3ED;
+    font-size: 12px;
+    margin: 20px 0;
+}

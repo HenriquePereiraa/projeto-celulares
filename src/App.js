@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { getAllPhones } from './api';
 import './App.css';
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
+import New from "./Components/New/New";
+import Tabela from "./Components/Tabela/Tabela";
+import Update from "./Components/Update/Update";
 
-function App() {
+
+function App() {  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Tabela/>}/>
+          <Route path="/update/:id" element={<Update/>}/>
+          <Route path="/new" element={<New/>}/>
+        </Routes>
+      </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
