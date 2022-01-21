@@ -30,7 +30,7 @@ export const getPhoneById = async (id) => {
   }
 }
 
-export const postPhone = async ({ model, brand, price, date, endDate, color }) => {
+export const postPhone = async ({ model, brand, price, date, endDate, color, code }) => {
   try {
     await api.post(`/phone`, {
       "model":model,
@@ -39,17 +39,15 @@ export const postPhone = async ({ model, brand, price, date, endDate, color }) =
       "date":date,
       "endDate":endDate,
       "color":color, 
-      "code":"#45796"
+      "code":code
     });
-
-    console.log("Sucess ")
   } catch(err) {
     console.log("Erro: ", err)
     throw new Error(err)
   }
 };
 
-export const updatePhone = async({model, brand, price, date, endDate, color, id}) => {
+export const updatePhone = async({model, brand, price, date, endDate, color, code, id}) => {
   try {
     await api.patch(`/phone/${id}`, {
       "model":model,
@@ -58,7 +56,7 @@ export const updatePhone = async({model, brand, price, date, endDate, color, id}
       "date":date,
       "endDate":endDate,
       "color":color, 
-      "code":"#45796"
+      "code":code
     });
 
   } catch (err) {

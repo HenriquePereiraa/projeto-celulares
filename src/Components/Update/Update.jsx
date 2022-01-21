@@ -45,6 +45,7 @@ const Update = () => {
 
 
   const onSubmit = (values) => {
+    let code = phone?.code
     const value = {
       model: values.modelo,
       brand: values.marca,
@@ -53,6 +54,7 @@ const Update = () => {
       endDate: getRerormateDate(values.endDate),
       color: values.color,
       id,
+      code
     };
 
     if(moment(values.date).isSameOrAfter(values.endDate)) {

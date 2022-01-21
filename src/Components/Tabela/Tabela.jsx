@@ -20,7 +20,6 @@ const Tabela = () => {
 
   useEffect(() => {
     loadData();
-    console.log("set")
   }, []);
 
   const handleClickAdd = () => {

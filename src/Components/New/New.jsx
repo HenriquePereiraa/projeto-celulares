@@ -5,6 +5,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { postPhone } from "../../api";
 import moment from "moment";
+import { generateRandomCode } from "../../utils/generateRandomCode";
 
 const getFormateDate = (currentDate) => {
   return currentDate.split("/").reverse().join("-");
@@ -25,6 +26,7 @@ const schema = Yup.object().shape({
 
 const New = () => {
   const onSubmit = (values) => {
+    let code = generateRandomCode();
     const value = {
       model: values.modelo,
       brand: values.marca,
@@ -32,6 +34,7 @@ const New = () => {
       date: getReformateDate(values.startDate),
       endDate: getReformateDate(values.endDate),
       color: values.color,
+      code
     };
 
     if(moment(values.date).isSameOrAfter(values.endDate)) {
